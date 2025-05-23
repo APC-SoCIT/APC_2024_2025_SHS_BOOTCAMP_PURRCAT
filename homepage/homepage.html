@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAMSport - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container home-page">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo-small"><span class="yellow">eme</span><span class="blue">port</span></div>
+            <a href="profile.html" class="profile-icon">A</a>
+        </header>
+
+        <!-- Main content -->
+        <main class="main-content">
+            <!-- Time and date card -->
+            <div class="home-card time-card" >
+                <!-- BUS PICTURE -->
+                <div class="card-icon">
+                    <img src="https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/465470130_8647425535303208_1348991237826460357_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFUolpjT5-0cGzQnP0UtLEvaNX-7q4eQ31o1f7urh5DfbgyxL3V0EO3uBNl6FLDGcWu7R9wWiTEXgh6i2zESvZg&_nc_ohc=8NAaJarGUZ4Q7kNvwHBf9lV&_nc_oc=AdkhQcNqnu-A40LGs-bd8f5PwcL4ESHabArMZE_c2dmamDTJ-7e9MJD6BvpUqo1ptww&_nc_zt=23&_nc_ht=scontent-lax3-2.xx&_nc_gid=6MBufimmiJnUroNP4uSzNQ&oh=00_AfLvG6bV_2FRwAcqrVhiFECZ5D3rgGKLo3IXZzV9wmUeqg&oe=68331E9E" alt="School bus">
+                </div>
+
+                <!-- Time and date -->
+                <div class="time-info">
+                    <h1 id="datetime" style="color: #363771"></h1>
+
+                <script>
+                    function updateTime() {
+                        // Get current date and time
+                        var now = new Date();
+                        var time = now.toLocaleString([], { hour: '2-digit', minute: '2-digit', hour12: true });
+
+                        // Insert date and time into HTML
+                        document.getElementById("datetime").innerHTML = time;
+                    }  
+                        setInterval(updateTime, 1000); // Update every second
+                        updateTime();
+                </script>
+                    <br>
+                    <p class="current-date" style="color: #363771">Today is<br> <span id="todayDate" style="color: #D7B356; "></span><!--changed--></p>
+                </div>
+                
+            </div>
+
+            <!-- Route map -->
+            <div class="home-card route-card">
+                <div class="route-pic">
+                    <a href="gps.html"><img src="https://www.calgaryhumane.ca/wp-content/uploads/2024/03/bUTTON-2-e1715715291738.png" alt="route map"></>
+                <a href="gps.html"> <div class="route-text">Track the APC Shuttle</div></a>
+                </div>
+            </div>
+
+            <!-- Available shuttles -->
+            <a href="shuttles.html" class="home-card shuttle-card">
+                <div class="shuttle-icon">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/025/276/021/small_2x/white-tour-bus-png.png" alt="Shuttle bus">
+                </div>
+                    <div class="shuttle-text">Check the available shuttles</div></a>
+            </a>
+
+            <!-- Shuttle status -->
+            <div a href="information.html" class="home-card status-card">
+            <a href="information.html">
+                <div class="status-icon">
+                    <img src="https://static.vecteezy.com/system/resources/previews/007/954/862/non_2x/people-in-mask-social-distancing-at-bus-station-vector.jpg" alt="waiting area">
+                    <div class="status-text">Check shuttle status</div>
+                </div>
+            </a>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
