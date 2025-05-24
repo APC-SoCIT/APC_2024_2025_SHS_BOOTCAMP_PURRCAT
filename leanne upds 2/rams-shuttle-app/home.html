@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAMSport - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container home-page">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo-small"><span class="yellow">RAMS</span><span class="blue">port</span></div>
+            <a href="profile.html" class="profile-icon">A</a>
+        </header>
+
+        <!-- Main content -->
+        <main class="main-content">
+            <!-- Time and date card -->
+            <div class="home-card time-card">
+                <div class="time-info">
+                    <h2 class="current-time">7:30 AM</h2>
+                    <p class="current-date">Today is <span id="todayDate"></span></p>
+                </div>
+                <div class="card-icon">
+                    <img src="images/school-bus-small.png" alt="School bus">
+                </div>
+            </div>
+
+            <!-- Route map -->
+            <div class="home-card route-card">
+                <div class="route-dots">
+                    <div class="route-dot"></div>
+                    <div class="route-line"></div>
+                    <div class="route-dot"></div>
+                    <div class="route-line"></div>
+                    <div class="route-dot"></div>
+                </div>
+                <p class="route-text">Track the APC Shuttle</p>
+            </div>
+
+            <!-- Available shuttles -->
+            <a href="information.html" class="home-card shuttle-card">
+                <div class="card-icon">
+                    <img src="images/shuttle-bus.png" alt="Shuttle bus">
+                </div>
+                <p class="card-text">Check the available shuttles</p>
+            </a>
+
+            <!-- Shuttle status -->
+            <div class="home-card status-card">
+                <div class="card-icon">
+                    <img src="images/bench.png" alt="Bench">
+                </div>
+                <p class="card-text">Check shuttle status</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
