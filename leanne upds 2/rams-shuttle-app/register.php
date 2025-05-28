@@ -7,15 +7,12 @@ $username = "root";
 $password = "";
 $dbname = "login_system";
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Make sure the POST data exists
 if (isset($_POST['email']) && isset($_POST['password'])) {
     $email = $_POST['email'];
     $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -24,9 +21,8 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     $stmt->bind_param("ss", $email, $pass);
 
     if ($stmt->execute()) {
-        // ✅ Redirect to home.html
         header("Location: home.html");
-        exit(); // Always call exit after redirect
+        exit();
     } else {
         echo "❌ Error: " . $stmt->error;
     }
