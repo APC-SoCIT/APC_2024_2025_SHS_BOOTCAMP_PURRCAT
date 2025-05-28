@@ -1,18 +1,16 @@
-// Toggle password visibility
 function togglePassword(inputId) {
   const passwordInput = document.getElementById(inputId);
   const eyeIcon = passwordInput.nextElementSibling.querySelector(".eye-icon");
 
   if (passwordInput.type === "password") {
     passwordInput.type = "text";
-    eyeIcon.src = "images/eye_pressed.png"; // closed eye
+    eyeIcon.src = "images/eye_pressed.png";
   } else {
     passwordInput.type = "password";
-    eyeIcon.src = "images/eye.png"; // open eye
+    eyeIcon.src = "images/eye.png";
   }
 }
 
-// Format today's date
 document.addEventListener("DOMContentLoaded", () => {
   const todayDateElement = document.getElementById("todayDate");
   if (todayDateElement) {
@@ -25,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
     todayDateElement.textContent = formattedDate;
   }
 
-  // Handle "I'm here" button
   const imHereBtn = document.getElementById("imHereBtn");
   if (imHereBtn) {
     imHereBtn.addEventListener("click", () => {
@@ -33,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Handle waiting toggle
   const waitingToggle = document.getElementById("waitingToggle");
   if (waitingToggle) {
     waitingToggle.addEventListener("change", function () {
@@ -42,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Form validation for sign-up
   const signupForm = document.getElementById("signupForm");
   if (signupForm) {
     signupForm.addEventListener("submit", (e) => {
@@ -51,16 +46,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (password !== confirmPassword) {
         alert("Passwords do not match!");
-        e.preventDefault(); // Block form only if passwords don't match
+        e.preventDefault();
       }
     });
   }
 
-  // No blocking for login form – let PHP handle it
   const loginForm = document.getElementById("loginForm");
   if (loginForm) {
     loginForm.addEventListener("submit", (e) => {
-      // No e.preventDefault() — let login.php handle the form
     });
   }
 });
