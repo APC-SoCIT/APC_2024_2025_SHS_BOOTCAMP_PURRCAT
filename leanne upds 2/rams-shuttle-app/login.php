@@ -28,6 +28,6 @@ if ($result->num_rows == 1) {
     echo "Email not found.";
 }
 
-$stmt->close(); // ✅ Close the statement here
+$stmt->close();
 $conn->close();
 ?>
