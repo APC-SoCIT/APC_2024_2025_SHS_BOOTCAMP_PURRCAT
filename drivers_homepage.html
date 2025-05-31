@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tRAMSport - DI Homepage</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Header -->
+        <header class="page-header">
+            <div class="header-content">
+                <img src="images/logo.png" class="logo">
+            
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Time and Date Card -->
+            <div class="card time-card">
+                <div class="time-display">
+                    <span class="time" id="currentTime">7:30 AM</span>
+                    <span class="date" id="currentDate">30/04/2025</span>
+                </div>
+                <div class="shuttle-image">
+                    <img src="images/homepage.png">
+                </div>
+            </div>
+            
+
+            <!-- Quick Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Active Shuttles</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">25</div>
+                    <div class="stat-label">People Waiting</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">142</div>
+                    <div class="stat-label">Today's Trips</div>
+                </div>
+            </div>
+
+            <!-- Navigation Cards -->
+            <div class="nav-cards">
+                <!-- Active Shuttles Card -->
+                <a href="shuttles.html" class="nav-card shuttles-card">
+                    <div class="card-icon">
+                        <img src="images/APC-Shuttles.png" alt="Blue Bus" class="bus-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Active APC Shuttles</h3>
+                        <p class="card-description">Monitor and manage shuttle fleet in real-time</p>
+                        <div class="card-status">
+                            <span class="status-dot active"></span>
+                            <span>2 Active • 1 Inactive</span>
+                        </div>
+                    </div>
+                    
+                </a>
+
+                <!-- Waiting Area Card -->
+                <a href="waiting-area.html"style="text-decoration: none; color: inherit;">
+                    <div class="nav-card waiting-card">
+                        <div class="card-icon">
+                            <img src="images/waiting-area.png" alt="People Waiting" class="people-image">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">People at Waiting Area</h3>
+                            <p class="card-description">Current passenger count and queue status</p>
+                            <div class="card-status">
+                                <span class="status-dot waiting"></span>
+                                <span>25 People Waiting</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </a>
+
+                <!-- Travel History Card -->
+                <a href="history.html" class="nav-card history-card">
+                    <div class="card-icon">
+                        <img src="images/big-bus.png" alt="Shuttle Interior" class="interior-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Shuttle Travel History</h3>
+                        <p class="card-description">View detailed trip logs and analytics</p>
+                        <div class="card-status">
+                            <span class="status-dot history"></span>
+                            <span>142 Trips Today</span>
+                        </div>
+                    </div>
+                    
+                </a>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="recent-activity">
+                <h3 class="section-title">Recent Activity</h3>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">🚌</div>
+                        <div class="activity-content">
+                            <div class="activity-text">Shuttle 1 departed from APC</div>
+                            <div class="activity-time">2 minutes ago</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">👥</div>
+                        <div class="activity-content">
+                            <div class="activity-text">8 passengers boarded at Lapu-Lapu Street</div>
+                            <div class="activity-time">5 minutes ago</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">🚌</div>
+                        <div class="activity-content">
+                            <div class="activity-text">Shuttle 2 arrived at APC</div>
+                            <div class="activity-time">8 minutes ago</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/homepage.js"></script>
+</body>
+</html>
