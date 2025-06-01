@@ -58,7 +58,7 @@ function updateStats() {
                     document.getElementById("totalWaiting").textContent = newValue;
                     break;
                 case 2: // Today's Trips
-                    newValue = Math.floor(Math.random() * 101) + 100;
+                    newValue = Math.floor(Math.random() * 43) + 10;
                     break;
                 default:
                     return;
