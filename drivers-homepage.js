@@ -1,3 +1,4 @@
+/*homepage*/
 // Update current time and date
 function updateDateTime() {
   const now = new Date()
@@ -27,34 +28,47 @@ function updateDateTime() {
 }
 
 // Simulate real-time stats updates
+document.addEventListener("DOMContentLoaded", () => {
+    updateStats(); // Run immediately
+    setInterval(updateStats, 30000); // Keep updating every 30 sec
+});
+
 function updateStats() {
-  const statNumbers = document.querySelectorAll(".stat-number")
+    const statNumbers = document.querySelectorAll(".stat-number");
 
-  // Randomly update stats to simulate real-time changes
-  statNumbers.forEach((stat, index) => {
-    if (Math.random() > 0.9) {
-      // 10% chance to update
-      const currentValue = Number.parseInt(stat.textContent)
-      let newValue
+    statNumbers.forEach((stat, index) => {
+        if (Math.random() > 0.5) { // Increased update chance to 50%
+            let newValue;
 
-      switch (index) {
-        case 0: // Active Shuttles (0-3)
-          newValue = Math.floor(Math.random() * 3) + 1;
-          break
-        case 1: // People Waiting (15-35)
-          newValue = Math.floor(Math.random() * 21) + 15
-          break
-        case 2: // Today's Trips (100-200)
-          newValue = Math.floor(Math.random() * 101) + 100
-          break
-        default:
-          newValue = currentValue
-      }
+            switch (index) {
+                case 0: // Active Shuttles
+                    newValue = Math.floor(Math.random() * 3) + 1;
+                    break;
+                case 1: // People Waiting (sum of two areas)
+                    const waitingArea1 = Math.floor(Math.random() * 11) + 5; // Random (5-15)
+                    const waitingArea2 = Math.floor(Math.random() * 11) + 10; // Random (10-20)
+                    newValue = waitingArea1 + waitingArea2;
 
-      stat.textContent = newValue
-    }
-  })
+                    // Store values for synchronization
+                    localStorage.setItem("waitingArea1", waitingArea1);
+                    localStorage.setItem("waitingArea2", waitingArea2);
+                    localStorage.setItem("totalWaiting", newValue);
+
+                    // Update homepage display
+                    document.getElementById("totalWaiting").textContent = newValue;
+                    break;
+                case 2: // Today's Trips
+                    newValue = Math.floor(Math.random() * 101) + 100;
+                    break;
+                default:
+                    return;
+            }
+
+            stat.textContent = newValue;
+        }
+    });
 }
+
 
 // Add new activity item
 function addActivity(icon, text) {
