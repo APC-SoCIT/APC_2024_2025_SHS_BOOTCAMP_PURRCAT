@@ -344,6 +344,7 @@ input::placeholder {
   font-size: 0.875rem;
 }
 
+/* Information page */
 .info-page {
   background-color: #dbeafe;
 }
@@ -452,7 +453,6 @@ input:checked + .toggle-slider:before {
   padding: 0.5rem 2rem;
 }
 
-/* Shuttles page */
 .page-title-header {
   font-size: 1.25rem;
   font-weight: 600;
