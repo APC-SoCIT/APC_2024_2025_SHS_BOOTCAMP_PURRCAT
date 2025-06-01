@@ -29,15 +29,15 @@ function updateDateTime() {
 
 // Simulate real-time stats updates
 document.addEventListener("DOMContentLoaded", () => {
-    updateStats(); // Run immediately
-    setInterval(updateStats, 30000); // Keep updating every 30 sec
+    updateStats(); 
+    setInterval(updateStats, 30000); 
 });
 
 function updateStats() {
     const statNumbers = document.querySelectorAll(".stat-number");
 
     statNumbers.forEach((stat, index) => {
-        if (Math.random() > 0.5) { // Increased update chance to 50%
+        if (Math.random() > 0.5) { /
             let newValue;
 
             switch (index) {
@@ -45,8 +45,8 @@ function updateStats() {
                     newValue = Math.floor(Math.random() * 3) + 1;
                     break;
                 case 1: // People Waiting (sum of two areas)
-                    const waitingArea1 = Math.floor(Math.random() * 11) + 5; // Random (5-15)
-                    const waitingArea2 = Math.floor(Math.random() * 11) + 10; // Random (10-20)
+                    const waitingArea1 = Math.floor(Math.random() * 11) + 5; 
+                    const waitingArea2 = Math.floor(Math.random() * 11) + 10; 
                     newValue = waitingArea1 + waitingArea2;
 
                     // Store values for synchronization
