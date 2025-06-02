@@ -37,7 +37,7 @@ function updateStats() {
     const statNumbers = document.querySelectorAll(".stat-number");
 
     statNumbers.forEach((stat, index) => {
-        if (Math.random() > 0.5) { /
+        if (Math.random() > 0.5) { 
             let newValue;
 
             switch (index) {
