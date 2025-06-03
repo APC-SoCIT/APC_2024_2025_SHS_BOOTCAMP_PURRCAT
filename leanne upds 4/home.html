@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RAMSport - Home</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="app-container home-page">
+            <!-- Header -->
+            <header class="app-header">
+                <div class="logo-info"><img src="images/tramsport-logo.png" alt="Logo"></div> 
+                <a href="profile.html" class="profile-icon">A</a>
+            </header>
+
+            <!-- Main content -->
+            <main class="main-content">
+                <!-- Time and date card -->
+                <div class="home-card time-card" >
+                    <!-- BUS PICTURE -->
+                    <div class="card-icon">
+                        <img src="https://scontent.fmnl4-1.fna.fbcdn.net/v/t39.30808-6/465470130_8647425535303208_1348991237826460357_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=-l7PdanCWb0Q7kNvwHJ0GTE&_nc_oc=AdkZyFOnCL5v5Uii-c_usSgnL_y4MAp3Yodhgtjm-EFNrk8Z1W8GxjcPWTR6NzkIOx9jBZREDcm-k4BLJo2lprfg&_nc_zt=23&_nc_ht=scontent.fmnl4-1.fna&_nc_gid=nlkLFra61NZ872sfSV9NeA&oh=00_AfJgT9wVHTsetfV2YyiDaEXbioCdp-YsobFKajIJbrIGyQ&oe=683DE2DE" alt="School bus">
+                    </div>
+
+                    <!-- Time and date -->
+                    <div class="time-info">
+                        <h1 id="datetime" style="color: #363771"></h1>
+
+                    <script>
+                        function updateTime() {
+                        var now = new Date();
+
+                        // Update time
+                        var time = now.toLocaleString([], { hour: '2-digit', minute: '2-digit', hour12: true });
+                        document.getElementById("datetime").innerHTML = time;
+
+                        // Format date like "May 29, 2025"
+                        document.getElementById("todayDate").innerHTML = now.toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                        });
+                        }
+
+                        setInterval(updateTime, 1000); // Update every second
+                        updateTime();
+                    </script>
+
+                        <br>
+                        <p class="current-date" style="color: #363771">Today is<br> <span id="todayDate" style="color: #D7B356; "></span><!--changed--></p>
+                    </div>
+                    
+                </div>
+
+                <!-- Route map -->
+                <div class="home-card route-card">
+                    <div class="route-pic">
+                        <a href="gps.html"><img src="https://www.calgaryhumane.ca/wp-content/uploads/2024/03/bUTTON-2-e1715715291738.png" alt="route map"></>
+                    <a href="gps.html"> <div class="route-text">Track the APC Shuttle</div></a>
+                    </div>
+                </div>
+
+                <!-- Available shuttles -->
+                <a href="shuttles.html" class="home-card shuttle-card">
+                    <div class="shuttle-icon">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/025/276/021/small_2x/white-tour-bus-png.png" alt="Shuttle bus">
+                    </div>
+                        <div class="shuttle-text">Check the available shuttles</div></a>
+                </a>
+
+                <!-- Shuttle status -->
+                <div a href="information.html" class="home-card status-card">
+                <a href="information.html">
+                    <div class="status-icon">
+                        <img src="https://static.vecteezy.com/system/resources/previews/007/954/862/non_2x/people-in-mask-social-distancing-at-bus-station-vector.jpg" alt="waiting area">
+                        <div class="status-text">Check shuttle status</div>
+                    </div>
+                </a>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
