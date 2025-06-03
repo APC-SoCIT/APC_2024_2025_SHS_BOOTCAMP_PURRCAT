@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RAMSport - GPS Tracking</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+<body>
+  <div class="app-container gps-page">
+    <!-- Map -->
+    <div id="map" class="map-container" style="height: 400px; border-radius: 12px;"></div>
+
+    <!-- Info card -->
+    <div class="card-container">
+      <div class="card gps-card">
+        <p class="card-subtitle">Estimated arrival time</p>
+        <h2 class="arrival-time">Less than 3 minutes</h2>
+
+        <div class="gray-line"></div>
+
+        <div class="im-here-container">
+          <button class="im-here-button" id="imHereBtn">I'm here!</button>
+        </div>
+
+        <p class="arrival-message">The driver should arrive any minute now!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Your Traccar Tracking Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>

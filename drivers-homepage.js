@@ -29,24 +29,26 @@ function updateDateTime() {
 
 // Simulate real-time stats updates
 document.addEventListener("DOMContentLoaded", () => {
-    updateStats(); 
-    setInterval(updateStats, 30000); 
+    updateStats(); // Run immediately
+    setInterval(updateStats, 30000); // Keep updating every 30 sec
 });
 
+// Function to update the stats
 function updateStats() {
     const statNumbers = document.querySelectorAll(".stat-number");
 
     statNumbers.forEach((stat, index) => {
-        if (Math.random() > 0.5) { /
+        if (Math.random() > 0.5) { // Increased update chance to 50%
             let newValue;
 
             switch (index) {
                 case 0: // Active Shuttles
                     newValue = Math.floor(Math.random() * 3) + 1;
                     break;
+
                 case 1: // People Waiting (sum of two areas)
-                    const waitingArea1 = Math.floor(Math.random() * 11) + 5; 
-                    const waitingArea2 = Math.floor(Math.random() * 11) + 10; 
+                    const waitingArea1 = Math.floor(Math.random() * 11) + 5; // Random (5-15)
+                    const waitingArea2 = Math.floor(Math.random() * 11) + 10; // Random (10-20)
                     newValue = waitingArea1 + waitingArea2;
 
                     // Store values for synchronization
@@ -57,9 +59,19 @@ function updateStats() {
                     // Update homepage display
                     document.getElementById("totalWaiting").textContent = newValue;
                     break;
-                case 2: // Today's Trips
-                    newValue = Math.floor(Math.random() * 43) + 10;
+
+                case 2: // Today's Trips (Increment by 1-2 every 5 minutes)
+                    let currentTrips = parseInt(localStorage.getItem("tripsCount")) || 10; // Default to 10
+
+                    if (currentTrips < 52) { // Ensure max is 52
+                        currentTrips += Math.floor(Math.random() * 2) + 1; // Increase by 1 or 2
+                        if (currentTrips > 52) currentTrips = 52; // Prevent exceeding 52
+                    }
+
+                    localStorage.setItem("tripsCount", currentTrips); // Save new value
+                    newValue = currentTrips;
                     break;
+
                 default:
                     return;
             }
@@ -69,6 +81,20 @@ function updateStats() {
     });
 }
 
+// Ensure "Today's Trips" updates every 5 minutes
+setInterval(() => {
+    let currentTrips = parseInt(localStorage.getItem("tripsCount")) || 10;
+
+    if (currentTrips < 52) {
+        currentTrips += Math.floor(Math.random() * 2) + 1;
+        if (currentTrips > 52) currentTrips = 52;
+    }
+
+    localStorage.setItem("tripsCount", currentTrips);
+
+    const tripStatElement = document.querySelectorAll(".stat-number")[2]; // Select "Today's Trips" element
+    if (tripStatElement) tripStatElement.textContent = currentTrips;
+}, 300000); // 5 minutes
 
 // Add new activity item
 function addActivity(icon, text) {
