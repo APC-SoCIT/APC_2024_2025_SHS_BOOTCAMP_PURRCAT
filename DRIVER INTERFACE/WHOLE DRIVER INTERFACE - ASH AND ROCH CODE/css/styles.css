@@ -320,8 +320,8 @@ input:checked + .slider .inactive
 }
 
 .shuttle-image img {
-  width: 100px;
-  height: auto;
+  width: 180px;
+  height: 100px;
   object-fit: contain;
   border-radius: 20%;
 }
