@@ -74,8 +74,8 @@ body {
   flex-direction: row-reverse;
   margin-left: auto;
   width: 100%;
-  max-width: 200px;
-  height: 60px;
+  max-width: 150px;
+  height: 40px;
 }
 
 .switch input {
@@ -132,23 +132,34 @@ input:checked + .slider:before {
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
-  font-size:0.69rem;
+  font-size:0.2rem;
+  font-family: Verdana, sans-serif;
+  font-weight: 550;
+}
+
+.active
+{
+  color: #363771;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  font-size:0.40rem;
   font-family: Verdana, sans-serif;
   font-weight: 550;
 }
 
 
 .slider .inactive {
-  right: 15%;
+  right: 3%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 0.68rem;
+  font-size: 0.40rem;
   color: #363771;
 }
 
 .slider .active {
-  left: 15%;
+  left: 12%;
   display: none;
 }
 
