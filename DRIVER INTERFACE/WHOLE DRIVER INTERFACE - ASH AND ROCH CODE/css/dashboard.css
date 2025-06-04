@@ -1,0 +1,391 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: calc(100vh - 40px);
+}
+
+/* Panel styles */
+.panel {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.panel-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.user-icon,
+.home-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f9d03b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.panel-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Homepage Panel */
+.homepage-panel .card {
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.time-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #f9d03b 0%, #f8c22c 100%);
+  color: #1e3a8a;
+}
+
+.time-display .time {
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+}
+
+.time-display .date {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.shuttle-image img {
+  width: 60px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.shuttles-overview-card {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+}
+
+.waiting-area-card {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+}
+
+.travel-history-card {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: white;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.bus-image,
+.people-image,
+.interior-image {
+  width: 50px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.card-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Shuttles Panel */
+.shuttles-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.shuttle-card {
+  background: #f8fafc;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shuttle-image-container {
+  flex-shrink: 0;
+}
+
+.shuttle-img {
+  width: 80px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.shuttle-status {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.status-badge,
+.occupancy-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.status-badge.active {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-badge.inactive {
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.occupancy-badge.occupied {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.occupancy-badge.unoccupied {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* History Panel */
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.history-image {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.history-image img {
+  width: 30px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.history-details {
+  flex: 1;
+}
+
+.history-date {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.9rem;
+}
+
+.history-time {
+  color: #6b7280;
+  font-size: 0.8rem;
+  margin: 2px 0;
+}
+
+.history-passengers {
+  color: #374151;
+  font-size: 0.8rem;
+  margin: 2px 0;
+}
+
+.history-route {
+  color: #6b7280;
+  font-size: 0.8rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    height: auto;
+  }
+
+  body {
+    padding: 10px;
+  }
+
+  .panel {
+    padding: 15px;
+  }
+
+  .panel-header h2 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .time-display .time {
+    font-size: 1.5rem;
+  }
+
+  .shuttle-card {
+    padding: 15px;
+  }
+
+  .shuttle-img {
+    width: 60px;
+    height: 40px;
+  }
+
+  .history-item {
+    padding: 12px;
+  }
+
+  .card-content {
+    gap: 10px;
+  }
+
+  .bus-image,
+  .people-image,
+  .interior-image {
+    width: 40px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 5px;
+  }
+
+  .dashboard-container {
+    gap: 10px;
+  }
+
+  .panel {
+    padding: 12px;
+  }
+
+  .panel-header {
+    margin-bottom: 15px;
+  }
+
+  .panel-header h2 {
+    font-size: 1rem;
+  }
+
+  .time-card {
+    padding: 12px;
+  }
+
+  .time-display .time {
+    font-size: 1.3rem;
+  }
+
+  .shuttle-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .shuttle-status {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .history-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .history-details {
+    text-align: center;
+  }
+}
+
+/* Tablet landscape */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .dashboard-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .history-panel {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1400px) {
+  .dashboard-container {
+    max-width: 1600px;
+  }
+
+  .panel {
+    padding: 25px;
+  }
+
+  .panel-header h2 {
+    font-size: 1.4rem;
+  }
+}
