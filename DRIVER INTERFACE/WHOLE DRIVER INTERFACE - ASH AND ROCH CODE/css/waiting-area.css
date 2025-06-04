@@ -1,0 +1,63 @@
+.waiting-card {
+  display: flex; 
+  align-items: center; 
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #e5e7eb;
+  margin-bottom: 1rem;
+  justify-content: flex-start; 
+}
+
+
+
+.waiting-card.lapu {
+  border-left-color: #10b981;
+}
+
+.waiting-card.apc {
+  border-left-color: #ef4444;
+}
+
+
+.waiting-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+  text-align: right;
+  flex: 0.7; 
+}
+
+
+
+.waiting-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+
+.waiting-label {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+
+
+.waiting-image {
+  display: flex; 
+  align-items: center ; 
+  flex: 0.3; 
+  justify-content: center;
+}
+
+
+.waiting-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; 
+  border-radius: 20%;
+}
+
