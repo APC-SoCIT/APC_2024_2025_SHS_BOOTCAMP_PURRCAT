@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAMSport - Active APC Shuttles</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Header -->
+        <header class="page-header">
+            <div class="header-content">
+                <div class="header-left">
+                    <a href="index.html" class="back-button">←</a>
+                    <h1 class="page-title">Active APC Shuttles</h1>
+                </div>
+                <div class="header-right">
+                    <button class="refresh-button" onclick="refreshShuttles()">🔄</button>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Shuttles</button>
+                <button class="filter-btn" data-filter="active">Active Only</button>
+                <button class="filter-btn" data-filter="inactive">Inactive Only</button>
+            </div>
+            <div class="view-toggle">
+                <button class="view-btn active" data-view="grid">⊞</button>
+                <button class="view-btn" data-view="list">☰</button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Shuttles Overview -->
+            <div class="overview-stats">
+                <div class="overview-card">
+                    <div class="overview-number">3</div>
+                    <div class="overview-label">Total Shuttles</div>
+                </div>
+                <div class="overview-card active">
+                    <div class="overview-number">2</div>
+                    <div class="overview-label">Active</div>
+                </div>
+                <div class="overview-card inactive">
+                    <div class="overview-number">1</div>
+                    <div class="overview-label">Inactive</div>
+                </div>
+                <div class="overview-card occupied">
+                    <div class="overview-number">2</div>
+                    <div class="overview-label">Occupied</div>
+                </div>
+            </div>
+
+            <!-- Shuttles Grid -->
+            <div class="shuttles-container" id="shuttlesContainer">
+                <!-- Shuttle 1 -->
+                <div class="shuttle-card" data-status="active" data-occupancy="occupied">
+                    <div class="shuttle-header">
+                        <div class="shuttle-id">Shuttle 001</div>
+                        <div class="shuttle-badges">
+                            <span class="status-badge active">Active</span>
+                            <span class="occupancy-badge occupied">Occupied</span>
+                        </div>
+                    </div>
+                    
+                    <div class="shuttle-image-container">
+                        <img src="images/white-bus-large.png" alt="Bus" class="shuttle-img">
+                    </div>
+                    
+                    <div class="shuttle-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Driver:</span>
+                            <span class="detail-value">Juan Dela Cruz</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Route:</span>
+                            <span class="detail-value">APC ↔ Lapu-Lapu</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Passengers:</span>
+                            <span class="detail-value">12/20</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Location:</span>
+                            <span class="detail-value">En route to APC</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">ETA:</span>
+                            <span class="detail-value">5 minutes</span>
+                        </div>
+                    </div>
+                    
+                    <div class="shuttle-actions">
+                        <button class="action-btn track">Track</button>
+                        <button class="action-btn contact">Contact</button>
+                    </div>
+                </div>
+
+                <!-- Shuttle 2 -->
+                <div class="shuttle-card" data-status="active" data-occupancy="occupied">
+                    <div class="shuttle-header">
+                        <div class="shuttle-id">Shuttle 002</div>
+                        <div class="shuttle-badges">
+                            <span class="status-badge active">Active</span>
+                            <span class="occupancy-badge occupied">Occupied</span>
+                        </div>
+                    </div>
+                    
+                    <div class="shuttle-image-container">
+                        <img src="images/gray-bus.png" alt="Bus" class="shuttle-img">
+                    </div>
+                    
+                    <div class="shuttle-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Driver:</span>
+                            <span class="detail-value">Maria Santos</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Route:</span>
+                            <span class="detail-value">APC ↔ Lapu-Lapu</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Passengers:</span>
+                            <span class="detail-value">8/20</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Location:</span>
+                            <span class="detail-value">At Lapu-Lapu</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">ETA:</span>
+                            <span class="detail-value">Loading passengers</span>
+                        </div>
+                    </div>
+                    
+                    <div class="shuttle-actions">
+                        <button class="action-btn track">Track</button>
+                        <button class="action-btn contact">Contact</button>
+                    </div>
+                </div>
+
+                <!-- Shuttle 3 -->
+                <div class="shuttle-card" data-status="inactive" data-occupancy="unoccupied">
+                    <div class="shuttle-header">
+                        <div class="shuttle-id">Shuttle 003</div>
+                        <div class="shuttle-badges">
+                            <span class="status-badge inactive">Not Active</span>
+                            <span class="occupancy-badge unoccupied">Available</span>
+                        </div>
+                    </div>
+                    
+                    <div class="shuttle-image-container">
+                        <img src="images/white-van.png" alt="Van" class="shuttle-img">
+                    </div>
+                    
+                    <div class="shuttle-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Driver:</span>
+                            <span class="detail-value">Not assigned</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Route:</span>
+                            <span class="detail-value">-</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Passengers:</span>
+                            <span class="detail-value">0/15</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Location:</span>
+                            <span class="detail-value">APC Parking</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Status:</span>
+                            <span class="detail-value">Maintenance</span>
+                        </div>
+                    </div>
+                    
+                    <div class="shuttle-actions">
+                        <button class="action-btn activate">Activate</button>
+                        <button class="action-btn assign">Assign Driver</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/shuttles.js"></script>
+</body>
+</html>
