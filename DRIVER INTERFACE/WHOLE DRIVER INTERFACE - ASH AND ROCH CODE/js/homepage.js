@@ -102,9 +102,9 @@ function updateActivityTimestamps() {
 function simulateActivity() {
   const activities = [
     { icon: "🚌", text: "Shuttle 1 departed from APC" },
-    { icon: "🚌", text: "Shuttle 2 arrived at Layan-Layan" },
+    { icon: "🚌", text: "Shuttle 2 arrived at Lapu-Lapu" },
     { icon: "👥", text: "12 passengers boarded at APC" },
-    { icon: "👥", text: "8 passengers alighted at Layan-Layan" },
+    { icon: "👥", text: "8 passengers alighted at Lapu-Lapu" },
     { icon: "🚌", text: "Shuttle 3 started maintenance check" },
     { icon: "👥", text: "Queue cleared at waiting area" },
   ]
