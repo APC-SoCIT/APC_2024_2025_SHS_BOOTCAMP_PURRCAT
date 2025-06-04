@@ -34,26 +34,22 @@ body {
 .header-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .header-left{
-  align-content: flex-start;
-}
-
-.header-left img {
-  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .title {
   color: #363771;
-  font-size: xx-large;
+  font-size: large;
   font-weight: 550;
 }
 
 .header-right {
   display: flex;
-  align-items: center;
   align-content: flex-end;
 }
 
