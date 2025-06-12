@@ -10,9 +10,8 @@ function updateNumbers() {
 }
 
 
-// Refresh the count every 3 seconds for both passenger & driver views
 setInterval(updateNumbers, 3000);
 
-// Call function on page load
+
 updateNumbers();
 
