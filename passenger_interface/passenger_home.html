@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAMSport - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container home-page">
+        <!-- Header --> <!--START of edit here-->
+        <header class="app-header">
+            <div class="logo-info"><img src="images/tramsport-logo.png" alt="Logo"></div>
+            <a href="tel:+63 939 862 6883" class="profile-icon"><img src="https://img.icons8.com/ios_filled/512/FAB005/apple-phone.png" alt="Phone"></a>
+        </header><!--END of edit here-->
+
+        <!-- Main content -->
+        <main class="main-content">
+
+            <!-- Time and date card -->
+            <div class="home-card time-card" >
+                <!-- BUS PICTURE -->
+                <div class="card-icon">
+                    <img src="https://scontent.fmnl4-1.fna.fbcdn.net/v/t39.30808-6/465470130_8647425535303208_1348991237826460357_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=-l7PdanCWb0Q7kNvwHJ0GTE&_nc_oc=AdkZyFOnCL5v5Uii-c_usSgnL_y4MAp3Yodhgtjm-EFNrk8Z1W8GxjcPWTR6NzkIOx9jBZREDcm-k4BLJo2lprfg&_nc_zt=23&_nc_ht=scontent.fmnl4-1.fna&_nc_gid=nlkLFra61NZ872sfSV9NeA&oh=00_AfJgT9wVHTsetfV2YyiDaEXbioCdp-YsobFKajIJbrIGyQ&oe=683DE2DE" alt="School bus">
+                </div>
+
+                <!-- Time and date -->
+                <div class="time-info">
+                    <h1 id="datetime" style="color: #363771"></h1>
+
+                <script>
+                    function updateTime() {
+                    var now = new Date();
+
+                    // Update time
+                    var time = now.toLocaleString([], { hour: '2-digit', minute: '2-digit', hour12: true });
+                    document.getElementById("datetime").innerHTML = time;
+
+                    document.getElementById("todayDate").innerHTML = now.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                    });
+                    }
+
+                    setInterval(updateTime, 1000); // Update every second
+                    updateTime();
+                </script>
+
+                    <br>
+                    <p class="current-date" style="color: #363771">Today is<br> <span id="todayDate" style="color: #D7B356; "></span><!--changed--></p>
+                </div>
+                
+            </div>
+
+            <!-- WEATHER -->
+            <a href = "information.html" class="home-card shuttle-card">
+                <a class="weatherwidget-io" href="https://forecast7.com/en/14d61121d02/metro-manila/" data-label_1="METRO MANILA" data-label_2="WEATHER" data-basecolor="#" data-textcolor="#363771" data-highcolor="#feb4b4" data-lowcolor="#b0bef6" data-suncolor="#fad985" data-mooncolor="#363771" data-cloudcolor="#363771" data-cloudfill="#E9ECF5" data-raincolor="#363771" >METRO MANILA WEATHER</a>
+                <script>
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                </script>
+            </a>
+            &nbsp;
+
+            <!-- SECTION AFTER WEATHER -->
+            <div class="home-card shuttle-card">
+
+            </div>
+
+            <!-- Route map -->
+            <div class="home-card route-card">
+                <div class="route-pic">
+                    <a href="gps.html"><img src="https://www.calgaryhumane.ca/wp-content/uploads/2024/03/bUTTON-2-e1715715291738.png" alt="route map"></->
+                <a href="gps.html"> <div class="route-text">Track the APC Shuttle</div></a>
+                </div>
+            </div>
+
+
+            <!-- Shuttle status -->
+            <div a href="information.html" class="home-card status-card">
+            <a href="information.html">
+                <div class="status-icon">
+                    <img src="https://static.vecteezy.com/system/resources/previews/007/954/862/non_2x/people-in-mask-social-distancing-at-bus-station-vector.jpg" alt="waiting area">
+                    <div class="status-text">Check shuttle status</div>
+                </div>
+            </a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
