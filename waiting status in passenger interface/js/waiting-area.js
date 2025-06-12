@@ -4,7 +4,7 @@ function updateNumbers() {
     fetch("http://localhost:3000/getCount")
         .then(response => response.json())
         .then(data => {
-            document.getElementById("waitingAreaAPC").textContent = data.count; // ✅ Updates only APC
+            document.getElementById("waitingAreaAPC").textContent = data.count; 
         })
         .catch(error => console.error("❌ Error fetching count:", error));
 }
