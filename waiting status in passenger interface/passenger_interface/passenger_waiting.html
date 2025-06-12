@@ -1,0 +1,55 @@
+<!--LINK TO RUN: http://localhost/tRAMSport/driver_interface/waiting_line.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tRAMSport - Waiting Line Status </title>
+    <link rel="stylesheet" href="../css/driver_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Header -->
+        <header class="page-header">
+            <div class="header-content">
+                <div class="header-left">
+                    <img src="../images/logo.png" class="logo" alt="logo">
+                </div>
+            </div>
+        </header>
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+            <div class="filter-buttons">
+                <a href="passenger_home.html" class="back-button">←</a>
+                <h1 class="page-title">Waiting Line Status</h1>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Shuttles Overview -->
+            <div class="waiting-stats">
+                <div class="waiting-card apc">
+                    <div class="waiting-image">
+                        <img src="../images/waiting-apc.png" alt="waiting area at APC">
+                    </div>
+                    <div class="waiting-info">
+                        <div class="waiting-number" id="waitingAreaAPC">1</div>
+                        <div class="waiting-label">Waiting at Asia Pacific College</div>
+                    </div>
+                </div>
+                <div class="waiting-card lapu">
+                    <div class="waiting-image">
+                        <img src="../images/waiting-lapu.png" alt="waiting area at Lapu-Lapu">
+                    </div>
+                    <div class="waiting-info">
+                        <div class="waiting-number" id="waitingAreaLapu">2</div>
+                        <div class="waiting-label">Waiting at Lapu-Lapu Street</div>
+                    </div>
+                </div>        
+            </div>
+        </main>
+    </div>
+    <script src="../js/waiting-area.js"></script>
+</body>
+</html>
