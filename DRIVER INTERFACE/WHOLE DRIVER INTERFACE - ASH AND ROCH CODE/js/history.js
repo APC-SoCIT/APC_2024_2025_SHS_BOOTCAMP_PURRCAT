@@ -112,7 +112,7 @@ function loadMoreTrips() {
     // Add more history items (simulated data)
     const newTrips = [
       {
-        route: "APC to Layan-Layan",
+        route: "APC to Lapu-Lapu",
         shuttle: "Shuttle 001",
         date: "May 25, 2025",
         time: "6:15 PM - 6:30 PM",
@@ -120,7 +120,7 @@ function loadMoreTrips() {
         duration: "15 minutes",
       },
       {
-        route: "Layan-Layan to APC",
+        route: "Lapu-Lapu to APC",
         shuttle: "Shuttle 002",
         date: "May 25, 2025",
         time: "6:00 PM - 6:15 PM",
@@ -132,7 +132,7 @@ function loadMoreTrips() {
     newTrips.forEach((trip) => {
       const historyItem = document.createElement("div")
       historyItem.className = "history-item"
-      historyItem.dataset.route = trip.route.includes("APC to") ? "apc-layan" : "layan-apc"
+      historyItem.dataset.route = trip.route.includes("APC to") ? "apc-lapu" : "lapu-apc"
       historyItem.dataset.date = "2025-05-25"
 
       historyItem.innerHTML = `

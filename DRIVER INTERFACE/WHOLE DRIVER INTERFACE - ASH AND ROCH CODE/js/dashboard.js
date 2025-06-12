@@ -65,7 +65,7 @@ function addHistoryItem() {
   const historyItem = document.createElement("div")
   historyItem.className = "history-item"
 
-  const routes = ["APC to Layan-Layan", "Layan-Layan to APC"]
+  const routes = ["APC to Lapu-Lapu", "Lapu-Lapu to APC"]
   const passengers = Math.floor(Math.random() * 15) + 1
   const route = routes[Math.floor(Math.random() * routes.length)]
 

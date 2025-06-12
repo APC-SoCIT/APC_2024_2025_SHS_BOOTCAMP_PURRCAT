@@ -12,8 +12,10 @@
         <!-- Header -->
         <header class="page-header">
             <div class="header-content">
-                <img src="images/logo.png" class="logo">
-            
+                <h1 class="page-title">DI Homepage</h1>
+                <div class="user-profile">
+                    <img src="images/default-avatar.jpg" alt="User" class="avatar">
+                </div>
             </div>
         </header>
 
@@ -26,7 +28,7 @@
                     <span class="date" id="currentDate">30/04/2025</span>
                 </div>
                 <div class="shuttle-image">
-                    <img src="images/homepage.png">
+                    <img src="images/homepage.png" alt="Shuttle">
                 </div>
             </div>
 
@@ -38,7 +40,6 @@
                 </script>
             </div>
             &nbsp;
-
             <!-- Navigation Cards -->
             <div class="nav-cards">
                 <!-- Active Shuttles Card -->
@@ -77,13 +78,16 @@
                     <div class="card-content">
                         <h3 class="card-title">Shuttle Travel History</h3>
                         <p class="card-description">View detailed trip logs and analytics</p>
-                        
+                        <div class="card-status">
+                            <span class="status-dot history"></span>
+                            <span>142 Trips Today</span>
+                        </div>
                     </div>
-                    
+                    <div class="card-arrow">→</div>
                 </a>
             </div>
 
-        </main>
+         </main>
     </div>
 
     <script src="js/homepage.js"></script>
